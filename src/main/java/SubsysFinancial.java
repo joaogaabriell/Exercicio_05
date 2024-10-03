@@ -1,11 +1,12 @@
 public class SubsysFinancial {
-    public String exibirBalanco() {
 
-        return "Receitas: R$ 500.000, Despesas: R$ 300.000, Lucro: R$ 200.000";
+    public String exibirBalanco() {
+        // Lógica para exibir o balanço financeiro
+        return "Balanço: Receita de R$ 10.000,00 e Despesa de R$ 7.500,00"; // Exemplo
     }
 
     public String exibirFolhaPagamento() {
-
-        return "Folha de pagamento total: R$ 100.000";
+        // Lógica para exibir a folha de pagamento
+        return "Folha de pagamento: R$ 5.000,00"; // Exemplo
     }
 }

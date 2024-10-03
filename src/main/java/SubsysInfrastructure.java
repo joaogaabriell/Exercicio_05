@@ -1,10 +1,13 @@
 public class SubsysInfrastructure {
-    public void alocarSala(String sala, String horario) {
-        System.out.println("Sala " + sala + " alocada para o horário " + horario + ".");
+
+    public boolean alocarSala(String sala, String horario) {
+        // Lógica de alocação de sala
+        System.out.println("Sala " + sala + " alocada para o horário " + horario);
+        return true; // Sucesso na alocação
     }
 
     public String exibirAlocacaoSalas() {
-
-        return "Sala 101: 08:00 - 10:00, Sala 102: 10:00 - 12:00";
+        // Lógica para exibir a alocação de salas
+        return "Sala 101: 08:00 - 10:00, Sala 202: 10:00 - 12:00"; // Exemplo
     }
 }

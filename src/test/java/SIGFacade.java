@@ -13,75 +13,73 @@ class SIGFacadeTest {
 
     @Test
     void testAgendarReuniaoDiretoria() {
-        // Simula o agendamento de reunião
-        sig.agendarReuniaoDiretoria("Dr. Silva", "10/10/2024");
-        // Como não há retorno, verificamos o console manualmente
-        assertTrue(true);
+        boolean result = sig.agendarReuniaoDiretoria("Dr. Silva", "10/10/2024");
+        assertTrue(result, "Agendamento da reunião deveria ser bem-sucedido.");
     }
 
     @Test
     void testRealizarEntrevistaCandidato() {
-        sig.realizarEntrevistaCandidato("Maria Oliveira");
-        assertTrue(true);
+        boolean result = sig.realizarEntrevistaCandidato("Maria Oliveira");
+        assertTrue(result, "Entrevista com o candidato deveria ser bem-sucedida.");
     }
 
     @Test
     void testExibirBalancoFinanceiro() {
-        sig.exibirBalancoFinanceiro();
-        assertTrue(true);  // Podemos validar verificando o retorno do console manualmente.
+        String balanco = sig.exibirBalancoFinanceiro();
+        assertNotNull(balanco, "O balanço financeiro não deve ser nulo.");
     }
 
     @Test
     void testExibirFolhaDePagamento() {
-        sig.exibirFolhaDePagamento();
-        assertTrue(true);
+        String folhaPagamento = sig.exibirFolhaDePagamento();
+        assertNotNull(folhaPagamento, "A folha de pagamento não deve ser nula.");
     }
 
     @Test
     void testAlocarProfessorDisciplina() {
-        sig.alocarProfessorDisciplina("Matemática", "Prof. João");
-        assertTrue(true);
+        boolean result = sig.alocarProfessorDisciplina("Matemática", "Prof. João");
+        assertTrue(result, "Alocação de professor na disciplina deveria ser bem-sucedida.");
     }
 
     @Test
     void testExibirTempoDeCasaProfessor() {
-        sig.exibirTempoDeCasaProfessor("Prof. João");
-        assertTrue(true);
+        String tempoCasa = sig.exibirTempoDeCasaProfessor("Prof. João");
+        assertNotNull(tempoCasa, "O tempo de casa do professor não deve ser nulo.");
     }
 
     @Test
     void testExibirHistoricoAluno() {
-        sig.exibirHistoricoAluno("Pedro Santos");
-        assertTrue(true);
+        String historico = sig.exibirHistoricoAluno("Pedro Santos");
+        assertNotNull(historico, "O histórico do aluno não deve ser nulo.");
     }
 
     @Test
     void testExibirRDMAluno() {
-        sig.exibirRDMAluno("Pedro Santos");
-        assertTrue(true);
+        String rdm = sig.exibirRDMAluno("Pedro Santos");
+        assertNotNull(rdm, "O RDM do aluno não deve ser nulo.");
     }
 
     @Test
     void testVerificarEstoqueItem() {
-        sig.verificarEstoqueItem("Projetor");
-        assertTrue(true);
+        int estoque = sig.verificarEstoqueItem("Projetor");
+        assertTrue(estoque >= 0, "O estoque do item deve ser um valor não negativo.");
     }
 
     @Test
     void testRealizarPedidoCompraItem() {
-        sig.realizarPedidoCompraItem("Projetor", 5);
-        assertTrue(true);
+        boolean result = sig.realizarPedidoCompraItem("Projetor", 5);
+        assertTrue(result, "O pedido de compra deveria ser bem-sucedido.");
     }
 
     @Test
     void testAlocarSalaHorario() {
-        sig.alocarSalaHorario("Sala 101", "08:00 - 10:00");
-        assertTrue(true);
+        boolean result = sig.alocarSalaHorario("Sala 101", "08:00 - 10:00");
+        assertTrue(result, "A alocação da sala deveria ser bem-sucedida.");
     }
 
     @Test
     void testExibirAlocacaoSalas() {
-        sig.exibirAlocacaoSalas();
-        assertTrue(true);
+        String alocacaoSalas = sig.exibirAlocacaoSalas();
+        assertNotNull(alocacaoSalas, "A alocação de salas não deve ser nula.");
     }
 }
