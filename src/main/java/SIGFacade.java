@@ -1,10 +1,10 @@
 public class SIGFacade {
-    private SubsysAdministrative administrative;
-    private SubsysFinancial financial;
-    private SubsysTeachers teachers;
-    private SubsysStudents students;
-    private SubsysWarehouse warehouse;
-    private SubsysInfrastructure infrastructure;
+    private final SubsysAdministrative administrative;
+    private final SubsysFinancial financial;
+    private final SubsysTeachers teachers;
+    private final SubsysStudents students;
+    private final SubsysWarehouse warehouse;
+    private final SubsysInfrastructure infrastructure;
 
     public SIGFacade() {
         administrative = new SubsysAdministrative();
